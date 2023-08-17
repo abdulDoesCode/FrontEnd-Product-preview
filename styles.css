@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --darkgrey: #747682;
+    --mediumlightgrey: #707176;
+    --darkgreen: #3D8168;
+    --black: #000000;
+    --bluishblack: #242A31;
+    --cream: #F2E9E2;
+}
+
+* , a{
+    color: var(--black);
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+body{
+    background-color: var(--cream);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    transition-delay: 200ms;
+}
+.attribution{
+    position: relative;
+    position: absolute;
+    bottom: 10px;
+}
+/* main container */
+.card-container{
+    background-color: var(--white);
+    min-width: 500px;
+    max-width: 500px;
+    height: 350px;
+    display: flex;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+/* image section */
+.image-content{
+    background-image: url("images/image-product-desktop.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: #000000;
+}
+.image-content img{
+    
+    height: 100%;
+}
+/* heading Section */
+.top-content h2, h1{
+    padding: .3rem ;
+    font-weight: bold;
+    font-size: x-large;
+}
+/* paragraph */
+.paragraph{
+    text-align: center;
+    font-size: 14px;
+}
+/* Amount Section */
+.amount{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.correct-val p{
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--darkgreen);
+}
+
+.strikethrough-val{
+    text-decoration: line-through;
+}
+/* CTA BUTTON */
+.button{
+    border: none !important;
+    position: relative;
+    position: absolute;
+    transform: translate(-50,-50);
+    bottom: 5px;
+    height: 50px;
+    left: 52%;
+    width: 40%;
+    background-color: var(--darkgreen);
+    border-radius: 10%;
+}
+.button:hover{
+    background-color: var(--darkgrey);
+}
+
+.button-pd{
+    display: flex;
+}
+.button-pd img,p{
+    margin: 10px;
+}
+.button-pd p{
+    color: var(--white);
+}
+
+@media (max-width: 450px) {
+    body{
+        background-color: #000000;
+        margin: 0;
+    }
+
+    .card-container{
+        padding: 0;
+        margin: 0;
+        display: grid;
+        max-width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+    }
+
+    .image-content{
+        background-image: url("images/image-product-mobile.jpg");
+    }
+}
